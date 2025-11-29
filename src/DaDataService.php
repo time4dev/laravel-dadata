@@ -46,6 +46,8 @@ class DaDataService
             $this->token = config('dadata.token');
             $this->secret = config('dadata.secret');
             $this->timeout = config('dadata.timeout');
+
+            $this->token = DadataEntity::getToken();
         } else {
             $this->token = env('DADATA_TOKEN', null);
             $this->secret = env('DADATA_SECRET', null);
