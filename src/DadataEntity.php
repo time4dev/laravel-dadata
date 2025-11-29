@@ -42,6 +42,6 @@ class DadataEntity
             }
         }
 
-        return null;
+        return env('DADATA_TOKEN', null);
     }
 }
